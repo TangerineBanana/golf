@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Scoreboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="number"] {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Golf Scoreboard</h1>
+    <table>
+        <tr>
+            <th>Player</th>
+            <th>Score 1</th>
+            <th>Score 2</th>
+            <th>Score 3</th>
+            <th>Total Score</th>
+        </tr>
+        <tr>
+            <td>Player 1</td>
+            <td><input type="number" id="p1s1" min="0" onchange="updateTotal('p1')" value="0"></td>
+            <td><input type="number" id="p1s2" min="0" onchange="updateTotal('p1')" value="0"></td>
+            <td><input type="number" id="p1s3" min="0" onchange="updateTotal('p1')" value="0"></td>
+            <td id="p1total">0</td>
+        </tr>
+        <tr>
+            <td>Player 2</td>
+            <td><input type="number" id="p2s1" min="0" onchange="updateTotal('p2')" value="0"></td>
+            <td><input type="number" id="p2s2" min="0" onchange="updateTotal('p2')" value="0"></td>
+            <td><input type="number" id="p2s3" min="0" onchange="updateTotal('p2')" value="0"></td>
+            <td id="p2total">0</td>
+        </tr>
+    </table>
+
+    <script>
+        function updateTotal(player) {
+            var score1 = parseInt(document.getElementById(player + "s1").value);
+            var score2 = parseInt(document.getElementById(player + "s2").value);
+            var score3 = parseInt(document.getElementById(player + "s3").value);
+            var total = score1 + score2 + score3;
+            document.getElementById(player + "total").textContent = total;
+        }
+    </script>
+</body>
+</html>
+
