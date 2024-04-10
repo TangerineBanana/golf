@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Scoreboard</title>
+</head>
+<body>
+    <h1>Welcome to the Golf Scoreboard</h1>
+    <p>This is a simple golf scoreboard. To use it, please go to the <a href="scoreboard.html">Scoreboard</a> page.</p>
+</body>
+</html>
